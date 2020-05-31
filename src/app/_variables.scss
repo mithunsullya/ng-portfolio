@@ -16,3 +16,39 @@ $font-size--medium: 40px;
 $font-size--subtitle: 50px;
 $font-size--title: 60px;
 $font-size--subtitle--sm: $font-size--xxxl;
+
+
+/* Breakpoints */
+$bp-smaller-than-mobile: "max-width: 40rem" !default;
+$bp-smaller-than-tablet: "max-width: 64rem" !default;
+$bp-smaller-than-desktop: "max-width: 75rem" !default;
+$bp-larger-than-mobile: "min-width: 40rem" !default;
+$bp-larger-than-tablet: "min-width: 64rem" !default;
+$bp-larger-than-desktop: "min-width: 75rem" !default;
+
+
+/** Breakpoints **/
+@mixin bp-large {
+  @media only screen and ($bp-larger-than-desktop) {
+    @content;
+  }
+}
+
+
+@mixin bp-medium {
+  @media only screen and ($bp-larger-than-tablet) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and ($bp-larger-than-mobile) {
+    @content;
+  }
+}
+
+@mixin bp-xs-small {
+  @media only screen and ($bp-smaller-than-mobile) {
+    @content;
+  }
+}

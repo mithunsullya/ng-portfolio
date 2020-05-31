@@ -3,23 +3,37 @@
 .banner {
     background: url('./../../assets/images/mithun.jpg') no-repeat;
     background-size: cover;
-    height: 650px;
+    height: 500px;
     position: relative;
+    background-position: center;
+    @include bp-medium() {
+       background-position: unset;
+       height: 650px;
+    }
 
     &:before {
         content: "";
         position: absolute;
         width: 100%;
-        height: 650px;
+        height: 500px;
         background: rgba(0, 0, 0, 0.3);
+        @include bp-medium() {
+            height: 650px;
+        }
     }
 
     .banner__info {
         position: relative;
         color: $color--white;
-        height: 650px;
+        height: 500px;
+        @include bp-medium() {
+            height: 650px;
+        }
         h1 {
-            font: $font-size--title $font--semibold;
+            font: $font-size--subtitle $font--semibold;
+            @include bp-medium() {
+                font: $font-size--title $font--semibold;
+            }
         }
         h2 {
             max-width: 450px;
@@ -28,8 +42,12 @@
     }
     .banner__detail {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: 30px;
+        @include bp-medium() {
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: unset;
+        }
     }
 
     .banner__title {

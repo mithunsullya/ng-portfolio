@@ -8,8 +8,25 @@
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    padding: 50px 0 30px;
+    padding: 30px 0 30px;
+    flex-wrap: wrap;
+    text-align: center;
+    @include bp-medium() {
+        text-align: unset;
+        padding: 50px 0 30px;
+    }
+    h5 {
+        margin-bottom: 16px;
+    }
 }
+.social-icons {
+    padding: 0;
+    flex: 0 0 100%;
+    @include bp-medium() {
+        padding: 0 0 0 40px;
+        flex: unset;
+    }
+} 
 .social-icon {
     color: #fff;
 }
