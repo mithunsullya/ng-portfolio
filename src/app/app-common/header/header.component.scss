@@ -31,7 +31,7 @@ header {
         transition: left .5s ease;
 
         @include bp-medium() {
-            position: unset;
+            position: unset !important;
             background-color: unset;
             height: unset;
             max-width: 100%;
@@ -40,7 +40,7 @@ header {
     .header__navigation {
         left: 50% !important;
         @include bp-medium() {
-            left: unset;
+            left: unset !important;
         }
         a {
             font-size: $font-size--l;
