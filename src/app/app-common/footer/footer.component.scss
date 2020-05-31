@@ -1,0 +1,28 @@
+@import './../../colors';
+
+footer {
+    background: $color--ghostwhite;
+    .fa-heart {
+        font-size: $font-size--xl;
+        color: $color--red;
+        padding: 0 8px;
+    }
+    .footer__items {
+        padding: 30px 0;
+        .strike {
+            height: 1px;
+            width: 100%;
+            background: $color--border;
+            flex: 0 0 30%;
+        }
+        .footer__info {
+            flex: 0 0 30%;
+            text-align: center;
+        }
+    }
+    .copyrights {
+        font-size: $font-size--xs;
+        color: $color--pale-black;
+        padding-bottom: 30px;
+    }
+}
