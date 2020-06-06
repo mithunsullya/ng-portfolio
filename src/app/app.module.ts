@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './app-common/header/header.component';
 import { FooterComponent } from './app-common/footer/footer.component';
 import { SocialLinksComponent } from './app-common/social-links/social-links.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SocialLinksComponent } from './app-common/social-links/social-links.com
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

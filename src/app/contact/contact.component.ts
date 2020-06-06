@@ -1,10 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  animations: [
+    trigger('fade', [ 
+      transition('void => *', [
+        style({opacity: 0}),
+        animate(1000)
+      ])
+    ])
+  ]
 })
 export class ContactComponent implements OnInit {
   contactForm : FormGroup;
